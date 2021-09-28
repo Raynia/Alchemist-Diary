@@ -13,5 +13,6 @@ UCLASS()
 class UNREALRPG_API AUnrealRPGGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+	virtual void StartPlay() override;
 };
