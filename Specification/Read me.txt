@@ -1,0 +1,9 @@
+이 디렉터리는 UnrealRPG (가제: Alchemist Diary)의 명세서가 있는 디렉터리입니다
+
+각 레벨에 배치된 에셋과 에셋의 기능을 대략적으로 설명하고 있습니다
+자세한 구현 방법은 언리얼 프로젝트를 확인해주십시오
+
+This directory includes specifiction document of UnrealRPG (Working title: Alchemist Diary)
+
+It describes the functions of the asset and the asset placed at each level.
+Please check the unreal project for detailed
