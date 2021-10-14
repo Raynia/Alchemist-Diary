@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Character.h"
 #include "MyCharacter.generated.h"
 
@@ -25,6 +26,9 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	bool isSprint;
+	UCharacterMovementComponent* PlayerMovementComponent;
 
 	UFUNCTION()
 	void MoveForward(float Value);

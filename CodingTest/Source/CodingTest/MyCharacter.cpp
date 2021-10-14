@@ -11,7 +11,8 @@ AMyCharacter::AMyCharacter()
 	this->AutoPossessPlayer = EAutoReceiveInput::Player0;
 	this->AutoReceiveInput = EAutoReceiveInput::Player0;
 	
-
+	isSprint = false;
+	PlayerMovementComponent = GetCharacterMovement();
 }
 
 // Called when the game starts or when spawned
@@ -74,16 +75,19 @@ void AMyCharacter::JumpEnd()
 
 void AMyCharacter::SprintStart()
 {
-
+	isSprint = true;
+	PlayerMovementComponent->MaxWalkSpeed = 1000.f;
 }
+
 void AMyCharacter::SprintEnd()
 {
-
+	isSprint = false;
+	PlayerMovementComponent->MaxWalkSpeed = 600.f;
 }
 
 void AMyCharacter::CrouchStart()
 {
-
+	
 }
 
 void AMyCharacter::CrouchEnd()
