@@ -29,6 +29,8 @@ public:
 
 	bool isSprint;
 	UCharacterMovementComponent* PlayerMovementComponent;
+	float SprintWalkSpeed;
+	float DefaultWalkSpeed;
 
 	UFUNCTION()
 	void MoveForward(float Value);
