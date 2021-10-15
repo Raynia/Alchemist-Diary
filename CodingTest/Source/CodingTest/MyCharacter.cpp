@@ -4,17 +4,15 @@
 #include "MyCharacter.h"
 
 // Sets default values
-AMyCharacter::AMyCharacter() : SprintWalkSpeed(1000.f)
+AMyCharacter::AMyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	this->AutoPossessPlayer = EAutoReceiveInput::Player0;
+	this->AutoReceiveInput = EAutoReceiveInput::Player0;
+	
 	isSprint = false;
 	PlayerMovementComponent = GetCharacterMovement();
-	DefaultWalkSpeed = PlayerMovementComponent->MaxWalkSpeed;
-
-	AutoPossessPlayer = EAutoReceiveInput::Player0;
-	AutoReceiveInput = EAutoReceiveInput::Player0;	
 }
 
 // Called when the game starts or when spawned
@@ -78,13 +76,13 @@ void AMyCharacter::JumpEnd()
 void AMyCharacter::SprintStart()
 {
 	isSprint = true;
-	PlayerMovementComponent->MaxWalkSpeed = SprintWalkSpeed;
+	PlayerMovementComponent->MaxWalkSpeed = 1000.f;
 }
 
 void AMyCharacter::SprintEnd()
 {
 	isSprint = false;
-	PlayerMovementComponent->MaxWalkSpeed = DefaultWalkSpeed;
+	PlayerMovementComponent->MaxWalkSpeed = 600.f;
 }
 
 void AMyCharacter::CrouchStart()

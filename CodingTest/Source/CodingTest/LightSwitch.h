@@ -25,10 +25,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(VisibleAnywhere, Category = "Switch Components")
+	UPROPERTY(VisibleAnywhere, Category = "Swithc Components")
 	UPointLightComponent* PointLight1;
 
-	UPROPERTY(VisibleAnywhere, Category = "Switch Components")
+	UPROPERTY(VisibleAnywhere, Category = "Swithc Components")
 	USphereComponent* Sphere1;
 
 	UFUNCTION()
